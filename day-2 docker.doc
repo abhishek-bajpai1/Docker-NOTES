@@ -1,0 +1,68 @@
+Docker installtion :
+
+I will not mention  below there is link  : given 
+https://docs.docker.com/get-docker/
+
+
+
+
+some basic commands of docker:
+
+1) docker ps : This command basically used to check the process status. 
+
+2) docker ps -a : This command will pull  request from first input of status process.
+
+2) docker pull: the name of the image, we can pull that from the Docker hub using the command docker pull
+                         docker pull --platform linux/x86_64 mysql
+
+3) docker images: we should have some images in our local machine, and to confirm, let’s run the following command to list all the local images.
+                                   command: docker images
+
+4) docker run : we have some images, we can try to create a container.env option to set a mandatory environment variable and --detach option to run the container in the background.
+                              RUN command: docker run --env MYSQL_ROOT_PASSWORD=my-secret-pw --detach mysql
+                              
+                              
+
+5) docker stop: To stop a container, use the docker stop command with either the container id or container name. We may stop a container if we want to change our docker run command.
+
+
+6)docker exec: Access the running container test_db by running the following command. It’s helpful if we want to access the MySQL command line and execute MySQL queries.
+                               docker exec: docker exec -it test_db bash
+                                            mysql -uroot -pmy-secret-pw
+                                            SHOW DATABASES;
+
+7) docker logs: This command is helpful to debug our Docker containers. It will fetch logs from a specified container.
+                    docker logs : docker logs test_db
+
+
+8) docker rm: In case we want to remove a container.
+
+
+9)  docker rmi: Finally, if we want to free some disk space, we can use the docker rmi command with the image id to remove an image.
+                           docker rmi: docker rmi eb0e825dc3cf 
+
+
+10) docker kill: This command kills the container by stopping its execution immediately.
+                   docker kill: docker kill <container id>
+
+
+11)docker commit: This command creates a new image of an edited container on the local system.
+                     dcoker commit: docker commit <conatainer id> <username/imagename>
+
+
+
+
+12) docker login: This command is used to login to the docker hub repository.
+                   
+
+13) docker push: his command is used to push an image to the docker hub repository.
+                  dcoker push: docker push <username/image name>
+
+
+14) docker build: This command is used to build an image from a specified docker file.
+                 docker build: docker build <path to docker file>
+
+
+
+
+>> These are basic command that we used  in docker .
