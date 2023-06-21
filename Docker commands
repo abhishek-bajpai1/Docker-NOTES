@@ -1,0 +1,40 @@
+A. Image commands:
+
+1. docker images - it gives the list of all docker images
+2. docker rmi <image_name> - remove the image
+3. docker pull <image_name> - pull the image from the docker repository
+4. docker images prune - remove all the dangling images
+5. docker build -t <image_name> directory - build a docker imiage from the docker file
+6. docker history <image_name> - show the history of the docker file
+7. docker inspect <image_name> - return low-level information on Docker objects
+8. docker commit <container_name> <image_name> - Create a new image from a container
+9. docker tag <image_name> <new_image_name> - create a new image from an old source image.
+10. docker save <image_name> <file_name> - saves the image in the file.
+11. docker load -i - load an image from a TAR archive.
+12. docker push <image_name> - upload an image to a registry.
+
+B: Container Commands:
+
+13. docker create <image_name> - create a container from the image
+14. docker start <image_name> - start the container from the image
+15. docker run --name <container_name> <-itdpv><image_name> - Create and run a new container from an image
+16. docker exec -it <container_name> __<command> - execute a command in a running container.
+17. docker stop <image_name> - stop the running container.
+18. docker rm<-f> <image_name> - remove the containers.
+19. docker ps -a - list the containers
+20. docker cp <container_name> :/<path><host_path> - Copy files/folders between a container and the local filesystem
+21. docker cp <host_path> <container_name> :/<path> - copy file between a container and host.
+22. docker commit- Create a new image from a container’s changes
+23. docker container - list the containers
+24. docker logs<container_name> - list the logs of the container.
+25. docker top <container_name> - display the running process of the container.
+26. docker inspect <container_name> - inspect the container.
+27. docker update - Update configuration of one or more containers
+
+C: General Commands:
+
+28. docker version - check the version of docker.
+29. docker volumes - manage the volumes in docker
+30. docker wait - Block until one or more containers stop, then print their exit codes
+31. docker swarm - manage swarm
+32. docker system - manage system
